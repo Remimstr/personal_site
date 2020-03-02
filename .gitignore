@@ -1,0 +1,7 @@
+php_errorlog
+
+# Blog
+blog/*
+!blog/.htaccess
+
+
