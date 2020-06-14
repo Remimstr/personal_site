@@ -72,7 +72,7 @@
 				top: 19px;
         transform-style: preserve-3d;
         transition: transform .3s;
-				animation: rect-rotate 1s 1s;
+				animation: rect-rotate-small 1s 1s;
 				animation-fill-mode: forwards;
 		}
     .top {
@@ -91,8 +91,14 @@
         transform: rotateX(-90deg) translateZ(-19px);
     }
 
-    @keyframes rect-rotate {
-        100% { transform: rotateX(90deg) translateZ(19px); }
+    @keyframes rect-rotate-small {
+		    from {}
+        to { transform: rotateX(90deg) translateZ(19px); }
+    }
+
+    @keyframes rect-rotate-big {
+		    from {}
+        to { transform: rotateX(90deg) translateZ(50px); }
     }
 
 		.upper-tri {
@@ -149,30 +155,113 @@
 						transform: rotate(-360deg);
 				}
 		}
+
+    @media only screen and (min-width: 768px) {
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-width: 3px;
+        }
+
+        .inv-circle-section {
+            height: 100px;
+            top: -50px;
+            width: 70px;
+            left: -34px;
+            border-width: 3px;
+            border-left: none;
+            background: radial-gradient(
+								circle closest-corner
+								at -14px 50%,
+								transparent 47px,
+								goldenrod 48px,
+								transparent 51px,
+								transparent 50%
+            );
+        }
+
+        .d {
+            height: 100px;
+            border: 3px transparent solid;
+        }
+
+        .rect {
+            top: 50px;
+            transform-style: preserve-3d;
+            animation:
+                rect-rotate-big 1s 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .top {
+            height: 100px;
+            transform: translateZ(50px);
+            border-width: 3px;
+        }
+
+        .bottom {
+            height: 100px;
+            transform: rotateX(-90deg) translateZ(-50px);
+            border-width: 3px;
+        }
+
+        .upper-tri {
+		        height: 100px;
+		        width: auto;
+            left: 5px;
+		        border-top-width: 3px;
+		        border-right-width: 3px;
+            background:
+								linear-gradient(
+										37deg,
+										transparent 50%,
+										maroon 50%,
+										maroon calc(50% + 3px),
+										transparent calc(50% + 3px)
+								)
+								no-repeat;
+        }
+
+        .lower-tri {
+		        height: 100px;
+		        width: auto;
+		        border-bottom-width: 3px;
+		        border-left-width: 3px;
+            background:
+								linear-gradient(
+										37deg,
+										transparent 50%,
+										turquoise 50%,
+										turquoise calc(50% + 3px),
+										transparent calc(50% + 3px)
+								)
+								no-repeat;
+        }
+    }
 </style>
 
-<span class="flex justify-center items-center">
+<div class="flex justify-center items-center">
 	<div class="piece circle">
-		<Pro/>
+		<Pro class="h-full w-full"/>
 	</div>
 	<div class="piece">
-		<div class="inv-circle-section"/>
+		<div class="inv-circle-section"></div>
 	</div>
 	<div class="d">
-	  <D/>
+	  <D class="h-full w-full"/>
 	</div>
 	<div class="piece rect">
-		<p class="top"/>
+		<p class="top"></p>
 		<p class="bottom">
-				<UctDe />
+				<UctDe class="h-full w-full"/>
 		</p>
 	</div>
 	<div class="piece">
 		<div class="lower-tri">
-			<Sig />
+			<Sig class="h-full w-full"/>
 		</div>
 		<div class="upper-tri">
-			<Ign />
+			<Ign class="h-full w-full"/>
 		</div>
 	</div>
-</span>
+</div>

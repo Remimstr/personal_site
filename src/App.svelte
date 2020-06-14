@@ -1,10 +1,8 @@
 <script>
     import { onMount } from "svelte";
     import Typewriter from "svelte-typewriter";
-    import Design from "../public/assets/design.svg";
     import Vivus from "vivus";
-    import Cube from "./cube.svelte";
-    import Pro from "./product-design.svelte";
+    import ProductDesign from "./product-design.svelte";
 
     onMount(() => {
         new Vivus("design-svg", { duration: 400 }, () => {})
@@ -26,13 +24,10 @@
     </nav>
     <div class="px-4 py-4 text-center">
 		    <Typewriter interval={70}>
-            <h1 class="text-4xl">Front End Development</h1>
+            <h1 class="md:text-5xl">Front End Development</h1>
         </Typewriter>
         <div class="w-full">
-	          <Design id="design-svg" class="display-block m-auto w-48 h-auto" />
-        </div>
-        <div class="w-full">
-            <Pro />
+            <ProductDesign />
         </div>
     </div>
 </main>
