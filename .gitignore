@@ -4,4 +4,6 @@ php_errorlog
 blog/*
 !blog/.htaccess
 
+node_modules
+
 
