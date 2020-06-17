@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
     import Typewriter from "svelte-typewriter";
     import Vivus from "vivus";
-    import ProductDesign from "./product-design.svelte";
+    import ProductDesign from "./ProductDesign.svelte";
 
     onMount(() => {
         new Vivus("design-svg", { duration: 400 }, () => {})
