@@ -7,19 +7,23 @@
 </script>
 
 <style>
+		:root {
+				--border-width: 1px;
+				--height: 38px;
+				--half-height: calc(var(--height) / 2);
+		}
     .piece {
         float: left;
         position: relative;
     }
 		.circle {
-				width: 38px;
-				height: 38px;
-				border: 1px green solid;
+				width: var(--height);
+				border: var(--border-width) green solid;
 				border-radius: 50%;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				transform: rotate(45deg);
+				transform: rotate(75deg);
 				animation:
 				    spin 1s 1s;
         animation-fill-mode: forwards;
@@ -27,24 +31,25 @@
 
 		@keyframes spin {
 				from {}
-				to { transform: rotate(360deg)}
+				to { transform: rotate(360deg) }
 		}
 
 		.inv-circle-section {
-				top: -19px;
-				height: 38px;
-				width: 25px;
-				left: -13px;
+				--offset: 19px;
+				--width: 26px;
+				top: calc(0px - var(--offset));
+				height: calc(var(--height));
+				width: var(--width);
+				left: calc(var(--width) - var(--height));
 				position: absolute;
-				border-top: 1px goldenrod solid;
-				border-bottom: 1px goldenrod solid;
-				border-right: 1px goldenrod solid;
+				border: var(--border-width) goldenrod solid;
+				border-left: none;
         background: radial-gradient(
             circle closest-corner
-		        at -6px 50%,
-		        transparent 19px,
-		        goldenrod 19px,
-		        transparent 20px,
+		        at calc(var(--border-width) * -6) 50%,
+		        transparent calc(var(--offset) - var(--border-width)),
+		        goldenrod calc(var(--offset) - var(--border-width)),
+		        transparent calc(var(--offset) + var(--border-width)),
 		        transparent 50%
         );
 				animation:
@@ -57,10 +62,12 @@
 		}
 
 		.d {
+				height: var(--height);
 				transform: rotate3D(1, 0, 0, 180deg);
 				animation:
 				  d-rotate 1s 1s;
         animation-fill-mode: forwards;
+				border: var(--border-width) transparent solid;
     }
 
 		@keyframes d-rotate {
@@ -69,16 +76,17 @@
 		}
 
 		.rect {
-				top: 19px;
+				top: calc(var(--half-height));
         transform-style: preserve-3d;
         transition: transform .3s;
-				animation: rect-rotate-small 1s 1s;
+				animation: rect-rotate 1s 1s;
 				animation-fill-mode: forwards;
 		}
+
     .top {
-		    height: 38px;
-        border: 1px red solid;
-        transform: translateZ(19px);
+		    height: var(--height);
+        border: var(--border-width) red solid;
+        transform: translateZ(var(--half-height));
 		    background: repeating-linear-gradient(
 		        45deg,
 		        red 10px,
@@ -86,33 +94,30 @@
 		    )
     }
     .bottom {
-		    height: 38px;
-        border: 1px red solid;
-        transform: rotateX(-90deg) translateZ(-19px);
+		    height: var(--height);
+        border: var(--border-width) red solid;
+        transform: rotateX(-90deg) translateZ(calc(0px - var(--half-height)));
     }
 
-    @keyframes rect-rotate-small {
+    @keyframes rect-rotate {
 		    from {}
-        to { transform: rotateX(90deg) translateZ(19px); }
-    }
-
-    @keyframes rect-rotate-big {
-		    from {}
-        to { transform: rotateX(90deg) translateZ(50px); }
+        to { transform: rotateX(90deg) translateZ(var(--half-height)); }
     }
 
 		.upper-tri {
+				height: var(--height);
 				position: relative;
-				border-top: 1px maroon solid;
-				border-right: 1px maroon solid;
-				left: 2px;
+				border-top: var(--border-width) maroon solid;
+				border-right: var(--border-width) maroon solid;
+				/* This relationship is pretty much arbitrary */
+				left: calc((var(--border-width) * 2) - 1px);
 				background:
 						linear-gradient(
 								37deg,
 								transparent 50%,
 								maroon 50%,
-								maroon calc(50% + 1px),
-								transparent calc(50% + 1px)
+								maroon calc(50% + var(--border-width)),
+								transparent calc(50% + var(--border-width))
 						)
 						no-repeat;
 				background-size: 100% 100%;
@@ -129,16 +134,17 @@
 		}
 
 		.lower-tri {
+				height: var(--height);
 				position: absolute;
-        border-bottom: 1px solid turquoise;
-				border-left: 1px solid turquoise;
+        border-bottom: var(--border-width) solid turquoise;
+				border-left: var(--border-width) solid turquoise;
 				background:
 						linear-gradient(
 								37deg,
 								transparent 50%,
 								turquoise 50%,
-								turquoise calc(50% + 1px),
-								transparent calc(50% + 1px)
+								turquoise calc(50% + var(--border-width)),
+								transparent calc(50% + var(--border-width))
 						)
 						no-repeat;
 				background-size: 100% 100%;
@@ -157,85 +163,14 @@
 		}
 
     @media only screen and (min-width: 768px) {
-        .circle {
-            width: 100px;
-            height: 100px;
-            border-width: 3px;
-        }
+		    :root {
+				    --border-width: 3px;
+				    --height: 100px;
+		    }
 
         .inv-circle-section {
-            height: 100px;
-            top: -50px;
-            width: 70px;
-            left: -34px;
-            border-width: 3px;
-            border-left: none;
-            background: radial-gradient(
-								circle closest-corner
-								at -14px 50%,
-								transparent 47px,
-								goldenrod 48px,
-								transparent 51px,
-								transparent 50%
-            );
-        }
-
-        .d {
-            height: 100px;
-            border: 3px transparent solid;
-        }
-
-        .rect {
-            top: 50px;
-            transform-style: preserve-3d;
-            animation:
-                rect-rotate-big 1s 1s;
-            animation-fill-mode: forwards;
-        }
-
-        .top {
-            height: 100px;
-            transform: translateZ(50px);
-            border-width: 3px;
-        }
-
-        .bottom {
-            height: 100px;
-            transform: rotateX(-90deg) translateZ(-50px);
-            border-width: 3px;
-        }
-
-        .upper-tri {
-		        height: 100px;
-		        width: auto;
-            left: 5px;
-		        border-top-width: 3px;
-		        border-right-width: 3px;
-            background:
-								linear-gradient(
-										37deg,
-										transparent 50%,
-										maroon 50%,
-										maroon calc(50% + 3px),
-										transparent calc(50% + 3px)
-								)
-								no-repeat;
-        }
-
-        .lower-tri {
-		        height: 100px;
-		        width: auto;
-		        border-bottom-width: 3px;
-		        border-left-width: 3px;
-            background:
-								linear-gradient(
-										37deg,
-										transparent 50%,
-										turquoise 50%,
-										turquoise calc(50% + 3px),
-										transparent calc(50% + 3px)
-								)
-								no-repeat;
+		        --offset: 50px;
+            --width: 69px;
         }
     }
 </style>
