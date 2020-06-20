@@ -12,6 +12,10 @@
 				--height: 38px;
 				--half-height: calc(var(--height) / 2);
 		}
+		#container {
+				/* Add some extra space on the bottom to account for animations */
+				margin-bottom: var(--height);
+		}
     .piece {
         float: left;
         position: relative;
@@ -35,8 +39,9 @@
 		}
 
 		.inv-circle-section {
-				--offset: 19px;
-				--width: 26px;
+				--offset: var(--half-height);
+				/* This relationship is spurious */
+				--width: calc(var(--height) / 1.44);
 				top: calc(0px - var(--offset));
 				height: calc(var(--height));
 				width: var(--width);
@@ -49,7 +54,7 @@
 		        at calc(var(--border-width) * -6) 50%,
 		        transparent calc(var(--offset) - var(--border-width)),
 		        goldenrod calc(var(--offset) - var(--border-width)),
-		        transparent calc(var(--offset) + var(--border-width)),
+		        transparent calc(var(--offset)),
 		        transparent 50%
         );
 				animation:
@@ -63,6 +68,8 @@
 
 		.d {
 				height: var(--height);
+				/* This relationship is spurious */
+				width: calc(var(--height) / 2.6);
 				transform: rotate3D(1, 0, 0, 180deg);
 				animation:
 				  d-rotate 1s 1s;
@@ -77,6 +84,8 @@
 
 		.rect {
 				top: calc(var(--half-height));
+				/* This relationship is spurious */
+        width: calc(var(--height) * 1.9);
         transform-style: preserve-3d;
         transition: transform .3s;
 				animation: rect-rotate 1s 1s;
@@ -89,7 +98,7 @@
         transform: translateZ(var(--half-height));
 		    background: repeating-linear-gradient(
 		        45deg,
-		        red 10px,
+		        lightcoral 10px,
 		        white 20px
 		    )
     }
@@ -106,10 +115,12 @@
 
 		.upper-tri {
 				height: var(--height);
+				/* This relationship is spurious */
+				width: calc(var(--height) * 1.28);
 				position: relative;
 				border-top: var(--border-width) maroon solid;
 				border-right: var(--border-width) maroon solid;
-				/* This relationship is pretty much arbitrary */
+				/* This relationship is spurious */
 				left: calc((var(--border-width) * 2) - 1px);
 				background:
 						linear-gradient(
@@ -135,6 +146,8 @@
 
 		.lower-tri {
 				height: var(--height);
+        /* This relationship is spurious */
+        width: calc(var(--height) * 1.28);
 				position: absolute;
         border-bottom: var(--border-width) solid turquoise;
 				border-left: var(--border-width) solid turquoise;
@@ -162,20 +175,22 @@
 				}
 		}
 
-    @media only screen and (min-width: 768px) {
-		    :root {
-				    --border-width: 3px;
-				    --height: 100px;
-		    }
+    @media only screen and (min-width: 640px) {
+        :root {
+            --border-width: 2px;
+            --height: 65px;
+        }
+    }
 
-        .inv-circle-section {
-		        --offset: 50px;
-            --width: 69px;
+    @media only screen and (min-width: 768px) {
+        :root {
+            --border-width: 3px;
+            --height: 100px;
         }
     }
 </style>
 
-<div class="flex justify-center items-center">
+<div id="container" class="flex justify-center items-center">
 	<div class="piece circle">
 		<Pro class="h-full w-full"/>
 	</div>
