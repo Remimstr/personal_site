@@ -8,8 +8,8 @@
 
 <style>
 		:root {
-				--border-width: 1px;
-				--height: 38px;
+				--border-width: 2px;
+				--height: 55px;
 				--half-height: calc(var(--height) / 2);
 		}
 		#container {
@@ -22,6 +22,7 @@
     }
 		.circle {
 				width: var(--height);
+        min-width: var(--height);
 				border: var(--border-width) green solid;
 				border-radius: 50%;
 				display: flex;
@@ -45,7 +46,9 @@
 				top: calc(0px - var(--offset));
 				height: calc(var(--height));
 				width: var(--width);
-				left: calc(var(--width) - var(--height));
+				min-width: var(--width);
+				/* This relationship may be spurious */
+				left: calc(var(--width) - var(--height) + var(--border-width) / 2);
 				position: absolute;
 				border: var(--border-width) goldenrod solid;
 				border-left: none;
@@ -70,6 +73,7 @@
 				height: var(--height);
 				/* This relationship is spurious */
 				width: calc(var(--height) / 2.6);
+				min-width: calc(var(--height) / 2.6);
 				transform: rotate3D(1, 0, 0, 180deg);
 				animation:
 				  d-rotate 1s 1s;
@@ -86,6 +90,7 @@
 				top: calc(var(--half-height));
 				/* This relationship is spurious */
         width: calc(var(--height) * 1.9);
+				min-width: calc(var(--height) * 1.9);
         transform-style: preserve-3d;
         transition: transform .3s;
 				animation: rect-rotate 1s 1s;
@@ -117,6 +122,7 @@
 				height: var(--height);
 				/* This relationship is spurious */
 				width: calc(var(--height) * 1.28);
+				min-width: calc(var(--height) * 1.28);
 				position: relative;
 				border-top: var(--border-width) maroon solid;
 				border-right: var(--border-width) maroon solid;
@@ -148,6 +154,7 @@
 				height: var(--height);
         /* This relationship is spurious */
         width: calc(var(--height) * 1.28);
+				min-width: calc(var(--height) * 1.28);
 				position: absolute;
         border-bottom: var(--border-width) solid turquoise;
 				border-left: var(--border-width) solid turquoise;
@@ -177,7 +184,6 @@
 
     @media only screen and (min-width: 640px) {
         :root {
-            --border-width: 2px;
             --height: 65px;
         }
     }
