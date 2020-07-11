@@ -1,9 +1,9 @@
 <script>
-  import Pro from "../public/assets/pro.svg";
-  import D from "../public/assets/d.svg";
-  import UctDe from "../public/assets/uctde.svg";
-  import Ign from "../public/assets/ign.svg";
-  import Sig from "../public/assets/sig.svg";
+  import Pro from "./pro.svelte";
+  import D from "./d.svelte";
+  import UctDe from "./uctde.svelte";
+  import Ign from "./ign.svelte";
+  import Sig from "./sig.svelte";
 </script>
 
 <style>
@@ -221,3 +221,4 @@
 		</div>
 	</div>
 </div>
+

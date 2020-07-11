@@ -1,13 +1,7 @@
 <script>
-    import { onMount } from "svelte";
     import Typewriter from "svelte-typewriter";
-    import Vivus from "vivus";
-    import ProductDesign from "./ProductDesign.svelte";
-    import ProjectsSection from "./ProjectsSection.svelte";
-
-    onMount(() => {
-        new Vivus("design-svg", { duration: 400 }, () => {})
-    })
+    import ProductDesign from "../components/ProductDesign.svelte";
+    import ProjectsSection from "../components/ProjectsSection.svelte";
 </script>
 
 <main>
@@ -34,8 +28,3 @@
     </div>
 </main>
 
-<style global>
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
-</style>

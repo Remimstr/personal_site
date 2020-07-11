@@ -1,10 +1,5 @@
-php_errorlog
-
-# Blog
-blog/*
-!blog/.htaccess
-
+.DS_Store
 node_modules
-public/build
-
-
+yarn-error.log
+/cypress/screenshots/
+/__sapper__/
