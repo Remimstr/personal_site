@@ -14,7 +14,7 @@
 		}
 		#container {
 				/* Add some extra space on the bottom to account for animations */
-				margin-bottom: var(--height);
+				margin-bottom: calc(var(--height) / 2);
 		}
     .piece {
         float: left;

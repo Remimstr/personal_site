@@ -3,6 +3,7 @@
     import Typewriter from "svelte-typewriter";
     import Vivus from "vivus";
     import ProductDesign from "./ProductDesign.svelte";
+    import ProjectsSection from "./ProjectsSection.svelte";
 
     onMount(() => {
         new Vivus("design-svg", { duration: 400 }, () => {})
@@ -23,12 +24,13 @@
         </button>
     </nav>
     <div class="px-4 py-4 text-center">
-		    <Typewriter interval={70}>
-            <h1 class="md:text-5xl">Front End Development</h1>
+		    <Typewriter interval={65}>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl">{@html `&lta&gtFront End Development&lt/a&gt`}</h1>
         </Typewriter>
         <div class="w-full">
             <ProductDesign />
         </div>
+        <ProjectsSection />
     </div>
 </main>
 
