@@ -1,9 +1,9 @@
 <script>
-  import Pro from "./pro.svelte";
-  import D from "./d.svelte";
-  import UctDe from "./uctde.svelte";
-  import Ign from "./ign.svelte";
-  import Sig from "./sig.svelte";
+  import Pro from "./product_design_helpers/pro.svelte";
+  import D from "./product_design_helpers/d.svelte";
+  import UctDe from "./product_design_helpers/uctde.svelte";
+  import Ign from "./product_design_helpers/ign.svelte";
+  import Sig from "./product_design_helpers/sig.svelte";
 </script>
 
 <style>
@@ -36,7 +36,7 @@
 
 		@keyframes spin {
 				from {}
-				to { transform: rotate(360deg) }
+				to { transform: rotate(360deg); }
 		}
 
 		.inv-circle-section {
@@ -66,7 +66,7 @@
 
 		@keyframes inv-circle-rotate {
 				from {}
-				to { transform: rotate3D(1, 0, 0, 180deg)}
+				to { transform: rotate3D(1, 0, 0, 180deg); }
 		}
 
 		.d {
@@ -83,7 +83,7 @@
 
 		@keyframes d-rotate {
 				from {}
-				to { transform: rotate3D(0, 0, 0, 0deg) }
+				to { transform: rotate3D(0, 0, 0, 0deg); }
 		}
 
 		.rect {
@@ -105,7 +105,7 @@
 		        45deg,
 		        lightcoral 10px,
 		        white 20px
-		    )
+		    );
     }
     .bottom {
 		    height: var(--height);
@@ -147,7 +147,7 @@
 
 		@keyframes upper-tri-rotate {
 				from {}
-				to { transform: rotate(0deg)}
+				to { transform: rotate(0deg); }
 		}
 
 		.lower-tri {
