@@ -12,10 +12,6 @@
 				--height: 55px;
 				--half-height: calc(var(--height) / 2);
 		}
-		#container {
-				/* Add some extra space on the bottom to account for animations */
-				margin-bottom: calc(var(--height) / 2);
-		}
     .piece {
         float: left;
         position: relative;
@@ -196,7 +192,7 @@
     }
 </style>
 
-<div id="container" class="flex justify-center items-center">
+<div class="flex justify-center items-center">
 	<div class="piece circle">
 		<Pro class="h-full w-full"/>
 	</div>
