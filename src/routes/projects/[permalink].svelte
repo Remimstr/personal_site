@@ -14,7 +14,7 @@
 
 <div class="flex items-center">
 		<h1>{project.title}</h1>
-		<a class="ml-6 text-blue-500" href="{project.link}">Visit</a>
+		<a class="ml-6" href="{project.link}">Visit</a>
 </div>
 
 {@html project.html}

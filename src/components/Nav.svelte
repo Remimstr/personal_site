@@ -22,12 +22,12 @@
 
 <nav class="flex items-center justify-between flex-wrap text-white bg-orange-500 p-5">
     <span class="font-semibold text-xl tracking-tight mr-6">
-		    <a class='{segment === undefined ? "selected" : ""}' href=".">Remi Marchand</a>
+		    <a class='text-white {segment === undefined ? "selected" : ""}' href=".">Remi Marchand</a>
     </span>
 
     <ul class="block flex-grow font-normal list-none">
-		    <li class="float-left ml-5"><a href="https://resume.remimstr.com">Resume</a></li>
-		    <li class="float-left ml-5"><a href="https://github.com/remimstr">Github</a></li>
+		    <li class="float-left ml-5"><a class="text-white" href="https://resume.remimstr.com">Resume</a></li>
+		    <li class="float-left ml-5"><a class="text-white" href="https://github.com/remimstr">Github</a></li>
     </ul>
 
     <button class="m">

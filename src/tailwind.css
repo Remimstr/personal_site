@@ -22,5 +22,18 @@ ul {
    @apply ml-6;
 }
 
+a {
+  @apply text-blue-500;
+}
+
+pre {
+  @apply p-2;
+  @apply bg-gray-200;
+}
+
+code {
+  @apply bg-gray-200;
+}
+
 @tailwind components;
 @tailwind utilities;
