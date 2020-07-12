@@ -20,8 +20,8 @@
 	}
 </style>
 
-<nav class="flex items-center justify-between flex-wrap text-white bg-orange-500 p-5">
-    <span class="font-semibold text-xl tracking-tight mr-6">
+<nav class="flex items-center justify-between flex-wrap text-white bg-orange-500 p-3">
+    <span class="font-semibold text-xl tracking-tight">
 		    <a class='text-white {segment === undefined ? "selected" : ""}' href=".">Remi Marchand</a>
     </span>
 

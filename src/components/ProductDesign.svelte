@@ -207,10 +207,10 @@
 	  <D class="h-full w-full"/>
 	</div>
 	<div class="piece rect">
-		<p class="top"></p>
-		<p class="bottom">
+		<div class="top"></div>
+		<div class="bottom">
 				<UctDe class="h-full w-full"/>
-		</p>
+		</div>
 	</div>
 	<div class="piece">
 		<div class="lower-tri">
