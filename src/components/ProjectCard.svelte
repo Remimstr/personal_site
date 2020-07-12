@@ -9,7 +9,7 @@
 <template>
     <div class="w-full lg:flex lg:max-w-full border rounded-lg shadow hover:shadow-md">
         {#if image}
-          <img alt="{title} Screenshot" class="lg:w-full object-cover rounded" src={image} />
+            <div class="h-48 lg:h-auto lg:w-32 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url({image})" title="{title} Screenshot"/>
         {/if}
         <div class="flex justify-between flex-col text-left mt-4 ml-4 mr-4 mb-2">
             <h1 class="font-bold">{title}</h1>
