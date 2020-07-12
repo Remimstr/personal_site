@@ -820,6 +820,15 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
+"@jackfranklin/rollup-plugin-markdown@^0.2.0":
+  version "0.2.0"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/@jackfranklin/rollup-plugin-markdown/-/rollup-plugin-markdown-0.2.0.tgz#d7027777573924fdbe2c6afc238bc15ec907219b"
+  integrity sha1-1wJ3d1c5JP2+LGr8I4vBXskHIZs=
+  dependencies:
+    gray-matter "^4.0.2"
+    rollup-pluginutils "^2.8.2"
+    showdown "^1.9.1"
+
 "@polka/url@^0.5.0":
   version "0.5.0"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/@polka/url/-/url-0.5.0.tgz#b21510597fd601e5d7c95008b76bf0d254ebfd31"
@@ -1074,6 +1083,11 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+charenc@~0.0.1:
+  version "0.0.2"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+  integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
+
 clean-css@^4.2.1:
   version "4.2.3"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/clean-css/-/clean-css-4.2.3.tgz#507b5de7d97b48ee53d84adb0160ff6216380f78"
@@ -1210,6 +1224,11 @@ cosmiconfig@^5.0.0:
     is-directory "^0.3.1"
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
+
+crypt@~0.0.1:
+  version "0.0.2"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
+  integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
 
 css-color-names@0.0.4, css-color-names@^0.0.4:
   version "0.0.4"
@@ -1549,6 +1568,13 @@ eventemitter3@^4.0.4:
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/eventemitter3/-/eventemitter3-4.0.4.tgz#b5463ace635a083d018bdc7c917b4c5f10a85384"
   integrity sha1-tUY6zmNaCD0Bi9x8kXtMXxCoU4Q=
 
+extend-shallow@^2.0.1:
+  version "2.0.1"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
+  integrity sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=
+  dependencies:
+    is-extendable "^0.1.0"
+
 fastparse@^1.1.2:
   version "1.1.2"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
@@ -1560,6 +1586,13 @@ find-up@^3.0.0:
   integrity sha1-SRafHXmTQwZG2mHsxa41XCHJe3M=
   dependencies:
     locate-path "^3.0.0"
+
+flat@^4.1.0:
+  version "4.1.0"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/flat/-/flat-4.1.0.tgz#090bec8b05e39cba309747f1d588f04dbaf98db2"
+  integrity sha1-CQvsiwXjnLowl0fx1YjwTbr5jbI=
+  dependencies:
+    is-buffer "~2.0.3"
 
 fs-extra@^8.0.0:
   version "8.1.0"
@@ -1618,6 +1651,16 @@ graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.4"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha1-Ila94U02MpWMRl68ltxGfKB6Kfs=
+
+gray-matter@^4.0.2:
+  version "4.0.2"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/gray-matter/-/gray-matter-4.0.2.tgz#9aa379e3acaf421193fce7d2a28cebd4518ac454"
+  integrity sha1-mqN546yvQhGT/OfSoozr1FGKxFQ=
+  dependencies:
+    js-yaml "^3.11.0"
+    kind-of "^6.0.2"
+    section-matter "^1.0.0"
+    strip-bom-string "^1.0.0"
 
 has-ansi@^2.0.0:
   version "2.0.0"
@@ -1789,6 +1832,16 @@ is-arrayish@^0.3.1:
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
   integrity sha1-RXSirlb3qyBolvtDHq7tBm/fjwM=
 
+is-buffer@~1.1.1:
+  version "1.1.6"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
+  integrity sha1-76ouqdqg16suoTqXsritUf776L4=
+
+is-buffer@~2.0.3:
+  version "2.0.4"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/is-buffer/-/is-buffer-2.0.4.tgz#3e572f23c8411a5cfd9557c849e3665e0b290623"
+  integrity sha1-PlcvI8hBGlz9lVfISeNmXgspBiM=
+
 is-callable@^1.1.4, is-callable@^1.2.0:
   version "1.2.0"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/is-callable/-/is-callable-1.2.0.tgz#83336560b54a38e35e3a2df7afd0454d691468bb"
@@ -1815,6 +1868,11 @@ is-directory@^0.3.1:
   version "0.3.1"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
   integrity sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
+
+is-extendable@^0.1.0:
+  version "0.1.1"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
+  integrity sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=
 
 is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
@@ -1877,7 +1935,7 @@ jest-worker@^24.0.0:
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha1-GSA/tZmR35jjoocFDUZHzerzJJk=
 
-js-yaml@^3.13.1:
+js-yaml@^3.11.0, js-yaml@^3.13.1:
   version "3.14.0"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha1-p6NBcPJqIbsWJCTYray0ETpp5II=
@@ -1920,6 +1978,11 @@ jsonfile@^4.0.0:
   integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   optionalDependencies:
     graceful-fs "^4.1.6"
+
+kind-of@^6.0.0, kind-of@^6.0.2:
+  version "6.0.3"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
+  integrity sha1-B8BQNKbDSfoG4k+jWqdttFgM5N0=
 
 leven@^3.1.0:
   version "3.1.0"
@@ -1970,7 +2033,7 @@ lodash.uniq@^4.5.0:
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.13, lodash@^4.17.15:
+lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.19:
   version "4.17.19"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha1-5I3e2+MLMyF4PFtDAfvTU7weSks=
@@ -2000,6 +2063,15 @@ matchit@^1.0.0:
   integrity sha1-mhKeOPebIFPddTOSFbGeH2u4jvs=
   dependencies:
     "@arr/every" "^1.0.0"
+
+md5@^2.2.1:
+  version "2.2.1"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/md5/-/md5-2.2.1.tgz#53ab38d5fe3c8891ba465329ea23fac0540126f9"
+  integrity sha1-U6s41f48iJG6RlMp6iP6wFQBJvk=
+  dependencies:
+    charenc "~0.0.1"
+    crypt "~0.0.1"
+    is-buffer "~1.1.1"
 
 mdn-data@2.0.4:
   version "2.0.4"
@@ -2834,6 +2906,15 @@ rollup-plugin-commonjs@^10.0.0:
     resolve "^1.11.0"
     rollup-pluginutils "^2.8.1"
 
+rollup-plugin-glob@^1.0.2:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/rollup-plugin-glob/-/rollup-plugin-glob-1.0.2.tgz#0980e4231e2f5b555a5b643fbcd1e06baa7b15a4"
+  integrity sha1-CYDkIx4vW1VaW2Q/vNHga6p7FaQ=
+  dependencies:
+    glob "^7.1.2"
+    md5 "^2.2.1"
+    rollup-pluginutils "^2.0.1"
+
 rollup-plugin-node-resolve@^5.2.0:
   version "5.2.0"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-5.2.0.tgz#730f93d10ed202473b1fb54a5997a7db8c6d8523"
@@ -2907,7 +2988,7 @@ rollup-pluginutils@^1.5.2:
     estree-walker "^0.2.1"
     minimatch "^3.0.2"
 
-rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
+rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
   version "2.8.2"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
   integrity sha1-cvKvB0i1kjZNvTOJ5gDlqURKNR4=
@@ -2954,6 +3035,14 @@ sax@~1.2.4:
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
 
+section-matter@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/section-matter/-/section-matter-1.0.0.tgz#e9041953506780ec01d59f292a19c7b850b84167"
+  integrity sha1-6QQZU1BngOwB1Z8pKhnHuFC4QWc=
+  dependencies:
+    extend-shallow "^2.0.1"
+    kind-of "^6.0.0"
+
 semver@7.0.0:
   version "7.0.0"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
@@ -2978,6 +3067,13 @@ shimport@^1.0.1:
   version "1.0.1"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/shimport/-/shimport-1.0.1.tgz#32ea5637e7707fdfa9037516f8c2a97786fc9031"
   integrity sha1-MupWN+dwf9+pA3UW+MKpd4b8kDE=
+
+showdown@^1.9.1:
+  version "1.9.1"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/showdown/-/showdown-1.9.1.tgz#134e148e75cd4623e09c21b0511977d79b5ad0ef"
+  integrity sha1-E04UjnXNRiPgnCGwURl315ta0O8=
+  dependencies:
+    yargs "^14.2"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
@@ -3078,6 +3174,11 @@ strip-ansi@^5.0.0, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
   dependencies:
     ansi-regex "^4.1.0"
 
+strip-bom-string@^1.0.0:
+  version "1.0.0"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/strip-bom-string/-/strip-bom-string-1.0.0.tgz#e5211e9224369fbb81d633a2f00044dc8cedad92"
+  integrity sha1-5SEekiQ2n7uB1jOi8ABE3IztrZI=
+
 strip-indent@^2.0.0:
   version "2.0.0"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/strip-indent/-/strip-indent-2.0.0.tgz#5ef8db295d01e6ed6cbf7aab96998d7822527b68"
@@ -3167,6 +3268,14 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+tailwindcss-text-indent@^1.0.2:
+  version "1.0.2"
+  resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/tailwindcss-text-indent/-/tailwindcss-text-indent-1.0.2.tgz#44e7bc1c5b081df9cb2336a7aae427a03b615bb5"
+  integrity sha1-ROe8HFsIHfnLIzanquQnoDthW7U=
+  dependencies:
+    flat "^4.1.0"
+    lodash "^4.17.11"
 
 tailwindcss@^1.0.1:
   version "1.4.6"
@@ -3341,7 +3450,7 @@ yargs-parser@^15.0.1:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs@^14.0.0:
+yargs@^14.0.0, yargs@^14.2:
   version "14.2.3"
   resolved "https://pkgs.dev.azure.com/acerta/_packaging/acerta/npm/registry/yargs/-/yargs-14.2.3.tgz#1a1c3edced1afb2a2fea33604bc6d1d8d688a414"
   integrity sha1-Ghw+3O0a+yov6jNgS8bR2NaIpBQ=

@@ -9,6 +9,8 @@ import pkg from "./package.json";
 import getPreprocessor from "svelte-preprocess";
 import postcss from "rollup-plugin-postcss";
 import PurgeSvelte from "purgecss-from-svelte";
+import markdown from "@jackfranklin/rollup-plugin-markdown";
+import glob from "rollup-plugin-glob";
 import path from "path";
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -64,6 +66,8 @@ export default {
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
+      markdown(),
+      glob(),
       svelte({
         dev,
         hydratable: true,
@@ -116,6 +120,8 @@ export default {
         "process.browser": false,
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
+      markdown(),
+      glob(),
       svelte({
         generate: "ssr",
         dev,

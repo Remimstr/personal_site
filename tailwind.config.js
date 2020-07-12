@@ -1,5 +1,20 @@
 module.exports = {
-    theme: {},
+    theme: {
+      textIndent: (theme, { negative }) => ({
+        ...{
+          sm: '2rem',
+          md: '3rem',
+          lg: '4rem',
+        },
+        ...negative({
+          sm: '2rem',
+          md: '3rem',
+          lg: '4rem',
+        }),
+      }),
+    } ,
     variants: {},
-    plugins: [],
+    plugins: [
+      require("tailwindcss-text-indent")()
+    ],
   }

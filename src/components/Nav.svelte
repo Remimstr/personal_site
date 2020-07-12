@@ -25,7 +25,7 @@
 		    <a class='{segment === undefined ? "selected" : ""}' href=".">Remi Marchand</a>
     </span>
 
-    <ul class="block flex-grow font-normal">
+    <ul class="block flex-grow font-normal list-none">
 		    <li class="float-left ml-5"><a href="https://resume.remimstr.com">Resume</a></li>
 		    <li class="float-left ml-5"><a href="https://github.com/remimstr">Github</a></li>
     </ul>

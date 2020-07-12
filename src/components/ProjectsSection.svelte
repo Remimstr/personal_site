@@ -1,6 +1,6 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
-  const projects = ["Acerta", "COVID-19 Dashboard", "Other"];
+  const projects = ["Acerta", "COVID-19 Globeview", "Other"];
 </script>
 
 

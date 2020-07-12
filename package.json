@@ -15,9 +15,13 @@
     "last 3 version"
   ],
   "dependencies": {
+    "@jackfranklin/rollup-plugin-markdown": "^0.2.0",
     "compression": "^1.7.1",
+    "lodash": "^4.17.19",
     "polka": "^0.5.0",
-    "sirv": "^0.4.0"
+    "rollup-plugin-glob": "^1.0.2",
+    "sirv": "^0.4.0",
+    "tailwindcss-text-indent": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
