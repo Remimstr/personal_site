@@ -88,6 +88,7 @@
 
 		:global(.tippy-tooltip) {
 				text-align: center;
+				font-size: 1rem;
 		}
 </style>
 
