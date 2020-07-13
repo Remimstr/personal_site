@@ -5,7 +5,7 @@
   import Ign from "./product_design_helpers/ign.svelte";
   import Sig from "./product_design_helpers/sig.svelte";
 
-  export let hasBeenVisited = false;
+  export let hasBeenVisited;
 </script>
 
 <style>
@@ -228,7 +228,7 @@
 	<div class="d" class:d-transformed={!hasBeenVisited}>
 	  <D class="h-full w-full"/>
 	</div>
-	<div class="piece rect" class:rect={!hasBeenVisited} class:plain-rect={hasBeenVisited}>
+	<div class="piece" class:rect={!hasBeenVisited} class:plain-rect={hasBeenVisited}>
 		<div class:top={!hasBeenVisited}></div>
 		<div class:bottom={!hasBeenVisited}>
 				<UctDe class="h-full w-full"/>
