@@ -72,6 +72,8 @@
 		function leave() {
 		  carousel.resume();
 		}
+
+		export let hasBeenVisited;
 </script>
 
 <style>
@@ -92,7 +94,7 @@
 		}
 </style>
 
-<div class="flex flex-col items-center carousel-section">
+<div class="flex flex-col items-center" class:carousel-section={!hasBeenVisited}>
     <h2 class="accordion-section m-2">My Favourite Tech</h2>
     <hr class="w-full block border border-blue-400 line"/>
 		<div class="w-full lg:w-3/5 md:w-4/5">

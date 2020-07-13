@@ -19,6 +19,8 @@
       readMore: "./projects/personal-website",
     }
   ]
+
+  export let hasBeenVisited;
 </script>
 
 <style>
@@ -52,9 +54,9 @@
 
 
 <div>
-  <h2 class="m-2 accordion-section">Projects</h2>
-  <hr class="block border border-blue-400 line"/>
-  <div class="flex flex-wrap justify-center accordion-section">
+  <h2 class="m-2" class:accordion-section={!hasBeenVisited}>Projects</h2>
+  <hr class="block border border-blue-400" class:line={!hasBeenVisited} />
+  <div class="flex flex-wrap justify-center" class:accordion-section={!hasBeenVisited}>
     {#each projects as project (project)}
       <div class="max-w-xs lg:max-w-lg md:max-w-md sm:max-w-sm m-6">
         <ProjectCard {...project} />

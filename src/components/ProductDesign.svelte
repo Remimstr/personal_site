@@ -4,6 +4,8 @@
   import UctDe from "./product_design_helpers/uctde.svelte";
   import Ign from "./product_design_helpers/ign.svelte";
   import Sig from "./product_design_helpers/sig.svelte";
+
+  export let hasBeenVisited = false;
 </script>
 
 <style>
@@ -24,9 +26,12 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				transform: rotate(75deg);
-				animation:
-				    spin 1s 1s;
+		}
+
+		.circle-transformed {
+        transform: rotate(75deg);
+        animation:
+                spin 1s 1s;
         animation-fill-mode: forwards;
 		}
 
@@ -56,8 +61,11 @@
 		        transparent calc(var(--offset)),
 		        transparent 50%
         );
-				animation:
-				  inv-circle-rotate 1s 1s;
+		}
+
+		.inv-circle-section-transformed {
+        animation:
+						inv-circle-rotate 1s 1s;
 		}
 
 		@keyframes inv-circle-rotate {
@@ -70,12 +78,15 @@
 				/* This relationship is spurious */
 				width: calc(var(--height) / 2.6);
 				min-width: calc(var(--height) / 2.6);
-				transform: rotate3D(1, 0, 0, 180deg);
-				animation:
-				  d-rotate 1s 1s;
-        animation-fill-mode: forwards;
 				border: var(--border-width) transparent solid;
     }
+
+		.d-transformed {
+        transform: rotate3D(1, 0, 0, 180deg);
+        animation:
+						d-rotate 1s 1s;
+        animation-fill-mode: forwards;
+		}
 
 		@keyframes d-rotate {
 				from {}
@@ -109,6 +120,15 @@
         transform: rotateX(-90deg) translateZ(calc(0px - var(--half-height)));
     }
 
+    .plain-rect {
+		    /* To compensate for when the rect makes the component occupy more space */
+		    margin: calc(var(--half-height)) 0;
+        width: calc(var(--height) * 1.9);
+        min-width: calc(var(--height) * 1.9);
+        border: var(--border-width) red solid;
+        height: var(--height);
+    }
+
     @keyframes rect-rotate {
 		    from {}
         to { transform: rotateX(90deg) translateZ(var(--half-height)); }
@@ -135,9 +155,12 @@
 						no-repeat;
 				background-size: 100% 100%;
         transform-origin: 0 0;
-				transform: rotate(53deg);
-				animation:
-					upper-tri-rotate 1s 1s;
+		}
+
+		.upper-tri-transformed {
+        transform: rotate(53deg);
+        animation:
+                upper-tri-rotate 1s 1s;
         animation-fill-mode: forwards;
 		}
 
@@ -165,9 +188,12 @@
 						no-repeat;
 				background-size: 100% 100%;
 				transform-origin: 0 100%;
-				transform: rotate(-180deg);
-				animation:
-					rotate-lower-tri 1s 1s;
+		}
+
+		.lower-tri-transformed {
+        transform: rotate(-180deg);
+        animation:
+                rotate-lower-tri 1s 1s;
         animation-fill-mode: forwards;
 		}
 
@@ -193,26 +219,26 @@
 </style>
 
 <div class="flex justify-center items-center">
-	<div class="piece circle">
+	<div class="piece circle" class:circle-transformed={!hasBeenVisited}>
 		<Pro class="h-full w-full"/>
 	</div>
 	<div class="piece">
-		<div class="inv-circle-section"></div>
+		<div class="inv-circle-section" class:inv-circle-section-transformed={!hasBeenVisited}></div>
 	</div>
-	<div class="d">
+	<div class="d" class:d-transformed={!hasBeenVisited}>
 	  <D class="h-full w-full"/>
 	</div>
-	<div class="piece rect">
-		<div class="top"></div>
-		<div class="bottom">
+	<div class="piece rect" class:rect={!hasBeenVisited} class:plain-rect={hasBeenVisited}>
+		<div class:top={!hasBeenVisited}></div>
+		<div class:bottom={!hasBeenVisited}>
 				<UctDe class="h-full w-full"/>
 		</div>
 	</div>
 	<div class="piece">
-		<div class="lower-tri">
+		<div class="lower-tri" class:lower-tri-transformed={!hasBeenVisited}>
 			<Sig class="h-full w-full"/>
 		</div>
-		<div class="upper-tri">
+		<div class="upper-tri" class:upper-tri-transformed={!hasBeenVisited}>
 			<Ign class="h-full w-full"/>
 		</div>
 	</div>
