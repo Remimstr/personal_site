@@ -5,6 +5,10 @@
     import Carousel from "../components/Carousel.svelte";
 </script>
 
+<title>
+    Home - Remi Marchand
+</title>
+
 <div class="flex flex-col flex-grow">
     <div class="flex-grow px-4 py-4 text-center">
         <Typewriter interval={65}>

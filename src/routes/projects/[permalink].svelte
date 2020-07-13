@@ -12,6 +12,10 @@
 		export let project
 </script>
 
+<title>
+	{project.title} - Projects
+</title>
+
 <div class="flex items-center">
 		<h1>{project.title}</h1>
 		{#if project.link}
