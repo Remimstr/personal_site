@@ -6,24 +6,8 @@
 </script>
 
 <style>
-	h1, p {
-		@apply mx-auto my-0;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
 	p {
 		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
 	}
 </style>
 
@@ -31,9 +15,10 @@
 	<title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
-
-<p>{error.message}</p>
+<div class="text-center m-4">
+    <h1>{status}</h1>
+    <p>{error.message}</p>
+</div>
 
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>

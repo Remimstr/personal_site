@@ -9,7 +9,7 @@
       projectLink: "https://covid19globe.remimstr.com"
     },
     {
-      title: "LinePulse@Acerta",
+      title: "Product Development @ Acerta",
       description: "Over the course of my 2+ years at Acerta, I have worked on product design, development, and planning. Constantly remaining in touch with the needs of the business, I effortlessly switch between building demos, mocks, and writing code.",
       readMore: "./projects/acerta-linepulse"
     },

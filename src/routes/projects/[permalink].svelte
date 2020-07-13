@@ -14,7 +14,9 @@
 
 <div class="flex items-center">
 		<h1>{project.title}</h1>
-		<a class="ml-6" href="{project.link}">Visit</a>
+		{#if project.link}
+			<a class="ml-6" href="{project.link}">Visit</a>
+		{/if}
 </div>
 
 {@html project.html}

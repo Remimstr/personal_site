@@ -30,7 +30,7 @@
 		    <li class="float-left ml-5"><a class="text-white" href="https://github.com/remimstr">Github</a></li>
     </ul>
 
-    <button class="m">
-        Contact
-    </button>
+    <span class="tracking-tight">
+		    <a class='text-white {segment === "about-me" ? "selected" : ""}' href="./about-me">About Me</a>
+    </span>
 </nav>

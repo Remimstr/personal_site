@@ -1,9 +1,9 @@
 <script>
     export let title;
     export let description;
-    export let image;
+    export let image = undefined;
     export let readMore;
-    export let projectLink;
+    export let projectLink = undefined;
 </script>
 
 <template>
