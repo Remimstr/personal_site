@@ -1,11 +1,9 @@
 <script>
-	import Nav from '../components/Nav.svelte';
-
+	import Nav from "../components/Nav.svelte";
 	export let segment;
 </script>
 
-<Nav {segment}/>
-
-<main>
+<main class="flex flex-col">
+	<Nav {segment} />
 	<slot></slot>
 </main>

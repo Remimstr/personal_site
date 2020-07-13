@@ -52,8 +52,8 @@
 
 
 <div>
-  <h1 class="text-2xl sm:text-4xl md:text-5xl accordion-section">Projects</h1>
-  <hr class="block border border-blue-400 mt-4 line"/>
+  <h2 class="m-2 accordion-section">Projects</h2>
+  <hr class="block border border-blue-400 line"/>
   <div class="flex flex-wrap justify-center accordion-section">
     {#each projects as project (project)}
       <div class="max-w-xs lg:max-w-lg md:max-w-md sm:max-w-sm m-6">
@@ -61,5 +61,4 @@
       </div>
     {/each}
   </div>
-  <hr class="block border border-blue-400 mt-4 line"/>
 </div>
