@@ -38,23 +38,25 @@
 </title>
 
 <div class="flex flex-col flex-grow">
-    {#if showContent}
         <div class="flex-grow px-4 py-4 text-center">
-            {#if !hasBeenVisited}
-                <Typewriter interval={65}>
+		        <!-- Don't wrap the project section to ensure it's always
+		             visible so that `svelte export` know which links to follow -->
+            {#if showContent}
+                {#if !hasBeenVisited}
+                    <Typewriter interval={65}>
+                        {@html frontEndDevText}
+                    </Typewriter>
+                {:else}
                     {@html frontEndDevText}
-                </Typewriter>
-            {:else}
-                {@html frontEndDevText}
+                {/if}
+                <div class="w-full">
+                    <ProductDesign {hasBeenVisited} />
+                </div>
             {/if}
-            <div class="w-full">
-                <ProductDesign {hasBeenVisited} />
-            </div>
             <ProjectsSection {hasBeenVisited} />
         </div>
         <div class="flex-shrink px-4 py-4">
             <Carousel {hasBeenVisited} />
         </div>
-    {/if}
 </div>
 
