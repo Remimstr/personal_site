@@ -35,6 +35,8 @@ a {
 pre {
   @apply p-2;
   @apply bg-gray-200;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 code {
