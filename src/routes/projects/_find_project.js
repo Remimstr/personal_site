@@ -1,5 +1,5 @@
 import _ from "lodash";
-import all from "*.md";
+import all from "../../docs/*.md";
 
 export const projects = _.chain(all)
   .map(transform)
