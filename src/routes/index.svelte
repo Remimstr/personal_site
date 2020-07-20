@@ -30,7 +30,7 @@
         }
     })
 
-    let frontEndDevText = '<h1 class="text-2xl sm:text-4xl md:text-5xl">&lta&gtFront End Development&lt/a&gt</h1>'
+    let frontEndDevText = '<h1 class="text-2xl sm:text-4xl md:text-5xl">&lta&gtWeb Development&lt/a&gt</h1>'
 </script>
 
 <title>

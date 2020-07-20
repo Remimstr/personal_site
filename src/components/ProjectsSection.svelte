@@ -56,9 +56,9 @@
 <div>
   <h2 class="m-2" class:accordion-section={!hasBeenVisited}>Projects</h2>
   <hr class="block border border-blue-400" class:line={!hasBeenVisited} />
-  <div class="flex flex-wrap justify-center" class:accordion-section={!hasBeenVisited}>
+  <div class="flex flex-wrap justify-center mt-2" class:accordion-section={!hasBeenVisited}>
     {#each projects as project (project)}
-      <div class="max-w-xs lg:max-w-lg md:max-w-md sm:max-w-sm m-6">
+      <div class="max-w-xs lg:max-w-lg md:max-w-md sm:max-w-sm m-4">
         <ProjectCard {...project} />
       </div>
     {/each}
