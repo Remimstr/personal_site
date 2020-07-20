@@ -30,7 +30,7 @@
         }
     })
 
-    let frontEndDevText = '<h1 class="text-2xl sm:text-4xl md:text-5xl">&lta&gtWeb Development&lt/a&gt</h1>'
+    let frontEndDevText = '<div>&lta&gtWeb Development&lt/a&gt</div>'
 </script>
 
 <title>
@@ -42,13 +42,15 @@
 		        <!-- Don't wrap the project section to ensure it's always
 		             visible so that `svelte export` know which links to follow -->
             {#if showContent}
-                {#if !hasBeenVisited}
-                    <Typewriter interval={65}>
-                        {@html frontEndDevText}
-                    </Typewriter>
-                {:else}
-                    {@html frontEndDevText}
-                {/if}
+            		<div class="text-2xl sm:text-4xl md:text-5xl">
+									{#if !hasBeenVisited}
+											<Typewriter interval={65}>
+													{@html frontEndDevText}
+											</Typewriter>
+									{:else}
+											{@html frontEndDevText}
+									{/if}
+                </div>
                 <div class="w-full">
                     <ProductDesign {hasBeenVisited} />
                 </div>
