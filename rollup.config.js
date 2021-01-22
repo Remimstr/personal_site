@@ -69,8 +69,10 @@ export default {
       markdown(),
       glob(),
       svelte({
-        dev,
-        hydratable: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         emitCss: true,
         preprocess,
       }),
@@ -123,8 +125,10 @@ export default {
       markdown(),
       glob(),
       svelte({
-        generate: "ssr",
-        dev,
+        compilerOptions: {
+          generate: "ssr",
+          dev,
+        },
         preprocess,
       }),
       resolve({
