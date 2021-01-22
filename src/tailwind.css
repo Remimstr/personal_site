@@ -1,31 +1,31 @@
 @tailwind base;
 
 h1 {
-    @apply text-3xl;
+  @apply text-3xl;
 }
 
 h2 {
-    @apply text-2xl;
-    @apply mt-4;
-    @apply mb-4;
+  @apply text-2xl;
+  @apply mt-4;
+  @apply mb-4;
 }
 
 h3 {
-    @apply text-xl;
-    @apply mt-4;
-    @apply mb-4;
+  @apply text-xl;
+  @apply mt-4;
+  @apply mb-4;
 }
 
 p {
-    @apply mt-6;
-    @apply mb-6;
-    font-size:;
-    line-height: 1.5;
+  @apply mt-6;
+  @apply mb-6;
+  font-size: ;
+  line-height: 1.5;
 }
 
 ul {
-   list-style: circle inside;
-   @apply ml-6;
+  list-style: circle inside;
+  @apply ml-6;
 }
 
 a {
@@ -43,7 +43,10 @@ code {
   @apply bg-gray-200;
 }
 
-html, body, main, #sapper {
+html,
+body,
+main,
+#sapper {
   height: 100%;
 }
 

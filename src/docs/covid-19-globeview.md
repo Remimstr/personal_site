@@ -5,7 +5,7 @@ link: https://covid19globe.remimstr.com
 
 ## The Concept
 
-As COVID-19 was beginning to spread outside of China in mid-February of 2020, many people (myself included) began to pay attention. Eager to get my hands on all the COVID information that I could, I dug up statistics, news articles, visualizations, and more. Then, one day after having already sifted through half a dozen of such sources, it occurred to me that I hadn't yet seen a view of the virus' spread on a 3D globe. 
+As COVID-19 was beginning to spread outside of China in mid-February of 2020, many people (myself included) began to pay attention. Eager to get my hands on all the COVID information that I could, I dug up statistics, news articles, visualizations, and more. Then, one day after having already sifted through half a dozen of such sources, it occurred to me that I hadn't yet seen a view of the virus' spread on a 3D globe.
 
 Based on work I'd done at Acerta using the powerful graphing library [echarts](https://echarts.apache.org/), and having seen the globe view examples and perused the API out of curiosity, I knew I could build this tool without too much effort and that the result would be impressive. On the night of Friday March 13, I began what effectively turned into a weekend hackathon to build this project as quickly as possible and release it to the world!
 
@@ -14,6 +14,7 @@ Based on work I'd done at Acerta using the powerful graphing library [echarts](h
 From the outset, the design of this project was very simple and clear; the globe would fill the entire screen I would put additional information in the corners and the edges of the screen. I decided to use the echarts globe almost exactly as presented in its excellent documentation. Filling in the rest of the screen would be title, "About" section with credits, and various controls.
 
 Throughout the course of building the project, the other pieces fell into place and the final design contains allow the user to interact with the chart in three ways:
+
 - The bottom left corner contains an interactive legend mapping the colours to the number of cases
 - The top right corner provides summary statistics for the highlighted region
 - The right side of the page contains a timeline with play/pause functionality
@@ -42,25 +43,25 @@ var chart = echarts.init(document.getElementById("app"));
 chart.setOption({
   globe: {
     viewControl: {
-      autoRotate: false
+      autoRotate: false,
     },
     shading: "realistic",
     baseTexture: WorldTopology,
     heightTexture: WorldTopology,
     environment: Starfield,
     realisticMaterial: {
-      roughness: 0.9
+      roughness: 0.9,
     },
     light: {
       ambient: {
         intensity: 0.8,
-        shadow: true
+        shadow: true,
       },
       main: {
-        intensity: 0.8
-      }
-    }
-  }
+        intensity: 0.8,
+      },
+    },
+  },
 });
 ```
 
@@ -71,6 +72,7 @@ I then wrote a helper function that constructs a query to the Github API for COV
 After adding some additional touches such as the title and "About" section, I was ready to release my baby to the world. I requested the subdomain from my hosting provider, built the code, and copied it to the server. I published to Facebook and reddit "r/programming" and was thrilled with peoples' reactions!
 
 The reddit community was wonderfully supportive of the project and provided excellent suggestions to improve the tool. Based on the feedback I received, I decided to prioritize the following items for the next release:
+
 - Cross-browser support was a little lacking particularly on iOS devices
 - Labels clipped into the globe cutting off information
 
@@ -81,6 +83,7 @@ The first issue was easily solved by including the correct polyfills. The second
 Because John Hopkins offered daily updates on COVID, I knew that an interactive timeline would be a really cool feature to have. Fortunately echarts provides a feature that does exactly that, called a "timeline". I tweaked my data fetching code to make an API request per date starting from March 1st through to the current date and the transformed each one into an echarts-appropriate object; the result is an echarts "option" that contains an array of data series.
 
 At this point, a problem that started out being relatively harmless began to manifest itself into a serious problem: Github throttling. Github only allows unauthenticated users to make 50 API requests per IP address per hour. I knew there were a couple of solutions to this problem:
+
 - Provide my Github credentials in the bundled code to make authenticated requests (**VERY BAD** - never do this!)
 - Download the data to my own server (I don't have a great host for this and I didn't know if it could handle the traffic)
 - Attempt to cache data from repeat requests as a stop-gap issue until 50 days had elapsed
@@ -106,10 +109,12 @@ On March 15th, I released my updated version to the world with significantly les
 ## Ethical Dilemma
 
 Shortly after releasing the updated dashboard to the world, I stumbled across a couple of articles that had me wondering if I should have created this project in the first place:
+
 - [Ten Considerations Before You Create Another Chart About COVID-19](https://medium.com/nightingale/ten-considerations-before-you-create-another-chart-about-covid-19-27d3bd691be8)
 - [Mapping coronavirus, responsibly](https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/?fbclid=IwAR1l_T73emqkZhsWFOpr0DtE86aKec7Opd8QXrnhrfhqWLXA79WdV_vPdwY)
 
-Based on the recommendations of these articles, I decided that my initial approach to building this dashboard *was* a little careless but that I could take a few steps to mitigate the potential damage it could cause:
+Based on the recommendations of these articles, I decided that my initial approach to building this dashboard _was_ a little careless but that I could take a few steps to mitigate the potential damage it could cause:
+
 - Reduce sensationalism by converting the color scheme from yellow, orange, and red to shades of blue
 - Cease to actively promote and update the project to minimize its spread
 - Monitor website traffic so that if viewership spiked, I could take it down if it became too popular
@@ -125,4 +130,3 @@ From a techical perspective, I learned that vanilla JS is quite feature-rich the
 If I hadn't been so laser-focused on building this project and getting it out there as quickly as possible, I would've possibly made more thoughtful design choices, such as serving COVID data from my own backend, or creating an automated deployment system. But then again, if I hadn't taken this approach, this project may have never reached the stage where I can discuss it as I just have.
 
 Thus I think the most important lesson I learned from this project is that a messy, imperfect project seen by many is better than a perfect one seen by none.
-

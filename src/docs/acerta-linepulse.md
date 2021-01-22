@@ -31,4 +31,3 @@ Encouraged by a mentor and supporter at work, to figure out what exactly to buil
 Throughout this process, I realized the value of knowing how to sell my ideas, especially ones that are more difficult and/or controversial. Due to the fantastic guidance of my mentor, I gained a toolkit for doing just that.
 
 ## To Be Continued... (writeup incomplete)
-
