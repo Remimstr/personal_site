@@ -1,3 +1,5 @@
 module.exports = {
-  "pre-commit": ["yarn prettier:write", "yarn eslint:fix"],
+  hooks: {
+    "pre-commit": "yarn prettier:write" && "yarn eslint:fix",
+  },
 };
