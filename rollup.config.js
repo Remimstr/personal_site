@@ -39,7 +39,9 @@ export default {
           hydratable: true,
         },
         emitCss: true,
-        preprocess: sveltePreprocess(),
+        preprocess: sveltePreprocess({
+          postcss: true,
+        }),
       }),
       resolve({
         browser: true,
@@ -95,7 +97,9 @@ export default {
           generate: "ssr",
           dev,
         },
-        preprocess: sveltePreprocess(),
+        preprocess: sveltePreprocess({
+          postcss: true,
+        }),
       }),
       resolve({
         dedupe,

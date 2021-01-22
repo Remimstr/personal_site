@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./**/*.svelte", "./**/*.html"],
   theme: {
     textIndent: (theme, { negative }) => ({
       ...{

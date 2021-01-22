@@ -1,4 +1,5 @@
 <script>
+  import Tailwindcss from "./tailwind.svelte";
   import Typewriter from "svelte-typewriter";
   import ProductDesign from "../components/ProductDesign.svelte";
   import ProjectsSection from "../components/ProjectsSection.svelte";
@@ -32,6 +33,8 @@
 
   let frontEndDevText = "<div>&lta&gtWeb Development&lt/a&gt</div>";
 </script>
+
+<Tailwindcss />
 
 <title> Home - Remi Marchand </title>
 

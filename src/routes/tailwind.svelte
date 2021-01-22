@@ -1,3 +1,5 @@
+<style global>
+
 @tailwind base;
 
 h1 {
@@ -19,7 +21,6 @@ h3 {
 p {
   @apply mt-6;
   @apply mb-6;
-  font-size: ;
   line-height: 1.5;
 }
 
@@ -52,3 +53,5 @@ main,
 
 @tailwind components;
 @tailwind utilities;
+
+</style>
