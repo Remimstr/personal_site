@@ -1,6 +1,7 @@
 {
-  "name": "Remimstr",
-  "description": "Remimstr",
+  "name": "personal-site-remimstr",
+  "license": "UNLICENSED",
+  "description": "Personal Website for Remi Marchand",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
