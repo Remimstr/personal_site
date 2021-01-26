@@ -31,7 +31,7 @@
     }
   });
 
-  let frontEndDevText = "<div>&lta&gtWeb Development&lt/a&gt</div>";
+  let frontEndDevText = "<p>Web Development</p>";
 </script>
 
 <Tailwindcss />
@@ -45,7 +45,7 @@
     {#if showContent}
       <div class="text-2xl sm:text-4xl md:text-5xl">
         {#if !hasBeenVisited}
-          <Typewriter interval={65}>
+          <Typewriter interval={65} cascade>
             {@html frontEndDevText}
           </Typewriter>
         {:else}
