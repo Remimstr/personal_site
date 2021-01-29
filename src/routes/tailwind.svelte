@@ -43,7 +43,10 @@
     @apply bg-gray-200;
   }
 
-  html, body, main, #sapper {
+  html,
+  body,
+  main,
+  #sapper {
     height: 100%;
   }
 

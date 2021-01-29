@@ -8,6 +8,7 @@
 
 <template>
   <div
+    data-cy="project-card"
     class="w-full lg:flex lg:max-w-full border rounded-lg shadow hover:shadow-md"
   >
     {#if image}

@@ -1,19 +1,36 @@
-describe("Sapper template app", () => {
+import projects from "../../src/projects";
+
+describe("Homepage Tests", () => {
   beforeEach(() => {
     cy.visit("/");
   });
 
-  it("has the correct <h1>", () => {
-    cy.contains("h1", "Great success!");
+  [
+    { title: "Resume", href: "https://resume.remimstr.com" },
+    { title: "Github", href: "https://github.com/remimstr" },
+  ].forEach(({ title, href }) => {
+    it(`Navigates to ${title}`, () => {
+      cy.get("nav a").contains(title).should("have.attr", "href", href);
+    });
   });
 
-  it("navigates to /about", () => {
-    cy.get("nav a").contains("about").click();
+  it("Navigates to the about page", () => {
+    cy.get("nav a").contains("About Me").click();
     cy.url().should("include", "/about");
   });
 
-  it("navigates to /blog", () => {
-    cy.get("nav a").contains("blog").click();
-    cy.url().should("include", "/blog");
+  projects.forEach((project, index) => {
+    const { title, description, readMore } = project;
+    it(`Finds project with title ${title}`, () => {
+      cy.getBySel("project-card")
+        .eq(index)
+        .within((element) => {
+          cy.get("h1").contains(title);
+          cy.get("p").contains(description);
+          cy.get("a")
+            .contains("Learn More")
+            .should("have.attr", "href", readMore);
+        });
+    });
   });
 });

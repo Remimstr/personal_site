@@ -1,28 +1,6 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
-  const projects = [
-    {
-      title: "COVID-19 Globeview",
-      description:
-        "A cool idea turned weekend hackathon, I built a website to visualize the spread of COVID-19 on a Globe.",
-      image: "covid-globe.png",
-      readMore: "./projects/covid-19-globeview",
-      projectLink: "https://covid19globe.remimstr.com",
-    },
-    {
-      title: "Product Development @ Acerta",
-      description:
-        "Over the course of my 2+ years at Acerta, I have worked on product design, development, and planning. Constantly remaining in touch with the needs of the business, I effortlessly switch between building demos, mocks, and writing code.",
-      readMore: "./projects/acerta-linepulse",
-    },
-    {
-      title: "This Website",
-      description:
-        "What started out a simple personal website using cutting-edge new front-end tech (Svelte and Tailwind CSS) turned into an unexpectedly interesting project once I introduced advanced CSS animations and markdown parsing.",
-      readMore: "./projects/personal-website",
-    },
-  ];
-
+  import projects from "../projects.json";
   export let hasBeenVisited;
 </script>
 
